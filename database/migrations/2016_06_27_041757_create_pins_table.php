@@ -14,7 +14,12 @@ class CreatePinsTable extends Migration
     {
         Schema::create('pins', function (Blueprint $table) {
             $table->increments('id');
-
+            $table->text('description');
+            $table->integer('like_count');
+            $table->string('link');
+            $table->string('image_url');
+            $table->integer('image_width');
+            $table->integer('image_height');
             $table->timestamps();
         });
     }

@@ -27,6 +27,20 @@ $app->withFacades();
 
 $app->withEloquent();
 
+
+/*
+|--------------------------------------------------------------------------
+|Custom Configuration
+|--------------------------------------------------------------------------
+|
+| Default configuration modifications
+|
+ */
+
+$app['config']->set('database.connections.mysql.unix_socket', '/Applications/MAMP/tmp/mysql/mysql.sock');
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings

@@ -17,3 +17,14 @@ $factory->define(App\User::class, function ($faker) {
         'email' => $faker->email,
     ];
 });
+
+$factory->define(App\Pin::class, function ($faker) {
+    return [
+        'description' => $faker->text(150),
+        'like_count' => 0,
+        'link' => $faker->url,
+        'image_url' => $faker->imageUrl(640, 480),
+        'image_width' => 640,
+        'image_height' => 480,
+    ];
+});

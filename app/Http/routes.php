@@ -12,5 +12,7 @@
 */
 
 $app->get('/', function () use ($app) {
-    return $app->version();
+    $pins = \App\Pin::all();
+
+    return response()->json($pins);
 });
